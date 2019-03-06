@@ -1,0 +1,12 @@
+D:\Code\FP.Authorization\APInet\MAuthAPI\mAuth.BusinessEntities\bin\Release\mAuth.BusinessEntities.dll
+D:\Code\FP.Authorization\APInet\MAuthAPI\mAuth.BusinessEntities\bin\Release\mAuth.BusinessEntities.pdb
+D:\Code\FP.Authorization\APInet\MAuthAPI\mAuth.BusinessEntities\obj\Release\mAuth.BusinessEntities.csprojAssemblyReference.cache
+D:\Code\FP.Authorization\APInet\MAuthAPI\mAuth.BusinessEntities\obj\Release\mAuth.BusinessEntities.csproj.CoreCompileInputs.cache
+D:\Code\FP.Authorization\APInet\MAuthAPI\mAuth.BusinessEntities\obj\Release\mAuth.BusinessEntities.dll
+D:\Code\FP.Authorization\APInet\MAuthAPI\mAuth.BusinessEntities\obj\Release\mAuth.BusinessEntities.pdb
+D:\Code\FP.Authorization\MAuth\MAuth.API\MAuthAPI\mAuth.BusinessEntities\bin\Release\mAuth.BusinessEntities.dll
+D:\Code\FP.Authorization\MAuth\MAuth.API\MAuthAPI\mAuth.BusinessEntities\bin\Release\mAuth.BusinessEntities.pdb
+D:\Code\FP.Authorization\MAuth\MAuth.API\MAuthAPI\mAuth.BusinessEntities\obj\Release\mAuth.BusinessEntities.csprojAssemblyReference.cache
+D:\Code\FP.Authorization\MAuth\MAuth.API\MAuthAPI\mAuth.BusinessEntities\obj\Release\mAuth.BusinessEntities.csproj.CoreCompileInputs.cache
+D:\Code\FP.Authorization\MAuth\MAuth.API\MAuthAPI\mAuth.BusinessEntities\obj\Release\mAuth.BusinessEntities.dll
+D:\Code\FP.Authorization\MAuth\MAuth.API\MAuthAPI\mAuth.BusinessEntities\obj\Release\mAuth.BusinessEntities.pdb

@@ -1,0 +1,11 @@
+D:\Code\FP.Authorization\APInet\MAuthAPI\mAuth.common\bin\Release\mAuth.common.dll
+D:\Code\FP.Authorization\APInet\MAuthAPI\mAuth.common\bin\Release\mAuth.common.pdb
+D:\Code\FP.Authorization\APInet\MAuthAPI\mAuth.common\obj\Release\mAuth.common.csproj.CoreCompileInputs.cache
+D:\Code\FP.Authorization\APInet\MAuthAPI\mAuth.common\obj\Release\mAuth.common.dll
+D:\Code\FP.Authorization\APInet\MAuthAPI\mAuth.common\obj\Release\mAuth.common.pdb
+D:\Code\FP.Authorization\MAuth\MAuth.API\MAuthAPI\mAuth.common\bin\Release\mAuth.common.dll
+D:\Code\FP.Authorization\MAuth\MAuth.API\MAuthAPI\mAuth.common\bin\Release\mAuth.common.pdb
+D:\Code\FP.Authorization\MAuth\MAuth.API\MAuthAPI\mAuth.common\obj\Release\mAuth.common.csprojAssemblyReference.cache
+D:\Code\FP.Authorization\MAuth\MAuth.API\MAuthAPI\mAuth.common\obj\Release\mAuth.common.csproj.CoreCompileInputs.cache
+D:\Code\FP.Authorization\MAuth\MAuth.API\MAuthAPI\mAuth.common\obj\Release\mAuth.common.dll
+D:\Code\FP.Authorization\MAuth\MAuth.API\MAuthAPI\mAuth.common\obj\Release\mAuth.common.pdb

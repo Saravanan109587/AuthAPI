@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAuthAPI", "MAuthAPI\MAuthAPI.csproj", "{B5CD64AC-AB64-4A9D-AABF-F4F49BEED120}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F155AB18-654E-4476-99A8-20873833DF08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mAuth.BusinessEntities", "mAuth.BusinessEntities\mAuth.BusinessEntities.csproj", "{A88FC875-C6B2-423D-993C-3C8770B01413}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mAuth.BusinessLogics", "mAuth.BusinessLogics\mAuth.BusinessLogics.csproj", "{1AAFA2A3-9563-4151-848F-86E62BBBD3FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mAuth.DataAccess", "mAuth.DataAccess\mAuth.DataAccess.csproj", "{761A8396-4717-4889-BB46-78C7B625E196}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mAuth.common", "mAuth.common\mAuth.common.csproj", "{657159ED-B251-4669-B82F-A64AB9314784}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAuthAPI.Test", "MAuthAPI.Test\MAuthAPI.Test.csproj", "{54318B76-CD85-4C6C-A0E9-6CDE06FF69F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5CD64AC-AB64-4A9D-AABF-F4F49BEED120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5CD64AC-AB64-4A9D-AABF-F4F49BEED120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5CD64AC-AB64-4A9D-AABF-F4F49BEED120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5CD64AC-AB64-4A9D-AABF-F4F49BEED120}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F155AB18-654E-4476-99A8-20873833DF08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F155AB18-654E-4476-99A8-20873833DF08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F155AB18-654E-4476-99A8-20873833DF08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F155AB18-654E-4476-99A8-20873833DF08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A88FC875-C6B2-423D-993C-3C8770B01413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A88FC875-C6B2-423D-993C-3C8770B01413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A88FC875-C6B2-423D-993C-3C8770B01413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A88FC875-C6B2-423D-993C-3C8770B01413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AAFA2A3-9563-4151-848F-86E62BBBD3FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AAFA2A3-9563-4151-848F-86E62BBBD3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AAFA2A3-9563-4151-848F-86E62BBBD3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AAFA2A3-9563-4151-848F-86E62BBBD3FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{761A8396-4717-4889-BB46-78C7B625E196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761A8396-4717-4889-BB46-78C7B625E196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761A8396-4717-4889-BB46-78C7B625E196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761A8396-4717-4889-BB46-78C7B625E196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{657159ED-B251-4669-B82F-A64AB9314784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{657159ED-B251-4669-B82F-A64AB9314784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{657159ED-B251-4669-B82F-A64AB9314784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{657159ED-B251-4669-B82F-A64AB9314784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54318B76-CD85-4C6C-A0E9-6CDE06FF69F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54318B76-CD85-4C6C-A0E9-6CDE06FF69F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54318B76-CD85-4C6C-A0E9-6CDE06FF69F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54318B76-CD85-4C6C-A0E9-6CDE06FF69F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE89F6EF-E877-4FAB-B2F7-91D222F4B0C4}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/kmit-india
+		SccProjectUniqueName0 = MAuthAPI.Test\\MAuthAPI.Test.csproj
+		SccProjectName0 = MAuthAPI.Test
+		SccLocalPath0 = MAuthAPI.Test
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = mAuth.BusinessEntities\\mAuth.BusinessEntities.csproj
+		SccProjectName2 = mAuth.BusinessEntities
+		SccLocalPath2 = mAuth.BusinessEntities
+		SccProjectUniqueName3 = mAuth.BusinessLogics\\mAuth.BusinessLogics.csproj
+		SccProjectName3 = mAuth.BusinessLogics
+		SccLocalPath3 = mAuth.BusinessLogics
+		SccProjectUniqueName4 = mAuth.common\\mAuth.common.csproj
+		SccProjectName4 = mAuth.common
+		SccLocalPath4 = mAuth.common
+		SccProjectUniqueName5 = mAuth.DataAccess\\mAuth.DataAccess.csproj
+		SccProjectName5 = mAuth.DataAccess
+		SccLocalPath5 = mAuth.DataAccess
+		SccProjectUniqueName6 = MAuthAPI\\MAuthAPI.csproj
+		SccProjectName6 = MAuthAPI
+		SccLocalPath6 = MAuthAPI
+	EndGlobalSection
+EndGlobal
