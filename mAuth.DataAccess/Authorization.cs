@@ -137,6 +137,8 @@ namespace mAuth.DataAccess
                         commandType: CommandType.StoredProcedure).ToList();
 
                 }
+                if (memProgramList.Count > 0)
+                    memProgramList.ForEach(x => x.quantity = x.maxTicket);
 
                 return memProgramList;
             }
@@ -356,7 +358,7 @@ namespace mAuth.DataAccess
                 salesTransactionDetail.TaxRateValue = ticket.taxRateValue;
                 salesTransactionDetail.POSId = POSId;
                 salesTransactionDetail.VisitingDate = DateTime.Now;
-                for (int jx = 1; jx <= ticket.maxTicket; jx++)
+                for (int jx = 1; jx <= ticket.quantity; jx++)
                 {
                     SalesTransactionDetail detail = (SalesTransactionDetail)salesTransactionDetail.Clone();
                     detail.Quantity = 1;

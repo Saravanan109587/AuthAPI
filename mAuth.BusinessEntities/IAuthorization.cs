@@ -99,6 +99,7 @@ namespace mAuth.BusinessEntities
         public decimal taxableAmount { get; set; }
         public int taxRateValue { get; set; }
         public int rulesId { get; set; }
+        public int quantity { get; set; }
     }
     public class SalesTransactionDetail
     {

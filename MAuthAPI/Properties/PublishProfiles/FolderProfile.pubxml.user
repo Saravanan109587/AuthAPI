@@ -5,72 +5,71 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>D:\apiRelease</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/HelpPage/HelpPage.css">
-      <publishTime>02/26/2019 13:37:37</publishTime>
+      <publishTime>03/06/2019 09:46:56</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/Api.cshtml">
-      <publishTime>02/26/2019 13:37:36</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ApiGroup.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/CollectionModelDescription.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ComplexTypeModelDescription.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/DictionaryModelDescription.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/EnumTypeModelDescription.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/HelpPageApiModel.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ImageSample.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/InvalidSample.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/KeyValuePairModelDescription.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ModelDescriptionLink.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Parameters.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Samples.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/SimpleTypeModelDescription.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/TextSample.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/Index.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/ResourceModel.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Shared/_Layout.cshtml">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Web.config">
-      <publishTime>02/26/2019 13:37:35</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/_ViewStart.cshtml">
-      <publishTime>02/26/2019 13:37:05</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>09/10/2013 16:29:20</publishTime>
@@ -85,34 +84,34 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2017 19:26:22</publishTime>
     </File>
     <File Include="bin/mAuth.BusinessEntities.dll">
-      <publishTime>03/05/2019 18:36:47</publishTime>
+      <publishTime>03/06/2019 13:05:49</publishTime>
     </File>
     <File Include="bin/mAuth.BusinessEntities.pdb">
-      <publishTime>03/05/2019 18:36:47</publishTime>
+      <publishTime>03/06/2019 13:05:49</publishTime>
     </File>
     <File Include="bin/mAuth.BusinessLogics.dll">
-      <publishTime>03/05/2019 18:36:47</publishTime>
+      <publishTime>03/06/2019 13:05:50</publishTime>
     </File>
     <File Include="bin/mAuth.BusinessLogics.pdb">
-      <publishTime>03/05/2019 18:36:47</publishTime>
+      <publishTime>03/06/2019 13:05:50</publishTime>
     </File>
     <File Include="bin/mAuth.common.dll">
-      <publishTime>03/03/2019 12:29:13</publishTime>
+      <publishTime>03/06/2019 13:05:49</publishTime>
     </File>
     <File Include="bin/mAuth.common.pdb">
-      <publishTime>03/03/2019 12:29:13</publishTime>
+      <publishTime>03/06/2019 13:05:49</publishTime>
     </File>
     <File Include="bin/mAuth.DataAccess.dll">
-      <publishTime>03/05/2019 18:36:47</publishTime>
+      <publishTime>03/06/2019 13:05:50</publishTime>
     </File>
     <File Include="bin/mAuth.DataAccess.pdb">
-      <publishTime>03/05/2019 18:36:47</publishTime>
+      <publishTime>03/06/2019 13:05:50</publishTime>
     </File>
     <File Include="bin/MAuthAPI.dll">
-      <publishTime>03/05/2019 19:01:01</publishTime>
+      <publishTime>03/06/2019 13:05:51</publishTime>
     </File>
     <File Include="bin/MAuthAPI.pdb">
-      <publishTime>03/05/2019 19:01:01</publishTime>
+      <publishTime>03/06/2019 13:05:51</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.TelemetryCorrelation.dll">
       <publishTime>06/28/2017 15:05:26</publishTime>
@@ -331,97 +330,97 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/23/2014 13:57:34</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css.map">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.min.css">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.min.css.map">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Content/bootstrap.css.map">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css.map">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>02/26/2019 13:37:05</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>02/26/2019 13:37:05</publishTime>
+      <publishTime>03/06/2019 09:46:56</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>02/26/2019 13:37:22</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>02/26/2019 13:37:05</publishTime>
+      <publishTime>03/06/2019 09:46:56</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>02/26/2019 13:37:21</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>02/26/2019 13:37:21</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.js">
-      <publishTime>02/26/2019 13:37:24</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.min.js">
-      <publishTime>02/26/2019 13:37:24</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.min.map">
-      <publishTime>02/26/2019 13:37:24</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.slim.js">
-      <publishTime>02/26/2019 13:37:24</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.slim.min.js">
-      <publishTime>02/26/2019 13:37:24</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.slim.min.map">
-      <publishTime>02/26/2019 13:37:24</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.8.3.js">
-      <publishTime>02/26/2019 13:37:37</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>02/26/2019 13:37:05</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
-      <publishTime>02/26/2019 13:37:05</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>02/26/2019 13:37:05</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>02/26/2019 13:37:05</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>02/26/2019 13:37:05</publishTime>
+      <publishTime>03/06/2019 09:46:57</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/03/2019 12:29:16</publishTime>
+      <publishTime>03/06/2019 13:05:51</publishTime>
     </File>
   </ItemGroup>
 </Project>
