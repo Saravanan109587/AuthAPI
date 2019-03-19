@@ -31,10 +31,9 @@ namespace MAuthAPI.Controllers
         /// <param name="user"> {username:'admin',password:'admin'}</param>
         /// <returns>{isValid:true,userRoles:[]}</returns>
         [HttpPost]
-        public IValidateUserResut ValidateUser(IUser user)
+        public IValidateUserResut  ValidateUser(IUser user)
         {
-            log.Debug("Entered into Validate User controller");
-
+            log.Debug("Entered into Validate User controller");           
             return validateBl.ValidateUser(user.userName, user.password);
         }
 

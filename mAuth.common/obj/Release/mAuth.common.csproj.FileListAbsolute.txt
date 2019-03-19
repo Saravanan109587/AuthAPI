@@ -4,3 +4,9 @@ D:\Code\mAuth\MAuthAPI\mAuth.common\obj\Release\mAuth.common.csprojAssemblyRefer
 D:\Code\mAuth\MAuthAPI\mAuth.common\obj\Release\mAuth.common.csproj.CoreCompileInputs.cache
 D:\Code\mAuth\MAuthAPI\mAuth.common\obj\Release\mAuth.common.dll
 D:\Code\mAuth\MAuthAPI\mAuth.common\obj\Release\mAuth.common.pdb
+D:\mAuth2.0\MAuthAPI\mAuth.common\bin\Release\mAuth.common.dll
+D:\mAuth2.0\MAuthAPI\mAuth.common\bin\Release\mAuth.common.pdb
+D:\mAuth2.0\MAuthAPI\mAuth.common\obj\Release\mAuth.common.csprojAssemblyReference.cache
+D:\mAuth2.0\MAuthAPI\mAuth.common\obj\Release\mAuth.common.csproj.CoreCompileInputs.cache
+D:\mAuth2.0\MAuthAPI\mAuth.common\obj\Release\mAuth.common.dll
+D:\mAuth2.0\MAuthAPI\mAuth.common\obj\Release\mAuth.common.pdb

@@ -223,6 +223,7 @@ namespace mAuth.BusinessEntities
         public int membershipListLineId { get; set; }
         public string name { get; set; }
         public DateTime dob { get; set; }
+        public byte[] image { get; set; }
         public int age { get; set; }
         public string gender { get; set; }
         public string relationShip { get; set; }
