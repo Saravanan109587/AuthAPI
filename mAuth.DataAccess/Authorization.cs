@@ -20,12 +20,13 @@ namespace mAuth.DataAccess
         }
 
 
-        public List<IAttraction> getAttractions()
+        public List<IAttraction> getAttractions(int posId)
         {
             List<IAttraction> attractionList;
 
             DynamicParameters parameter = new DynamicParameters();
             parameter.Add("@OrganizationUnitId", 1);
+            parameter.Add("@PosId", posId);
 
             try
             {
@@ -85,7 +86,7 @@ namespace mAuth.DataAccess
 
         }
 
-        public string Validate(string ticketORMemberID, string attractionCode, string updateID, int posID)
+        public string Validate(string ticketORMemberID, string attractionCode, string updateID, int posID,DateTime createdDate)
         {
             string authStatus = string.Empty;
             DynamicParameters parameter = new DynamicParameters();
@@ -93,7 +94,7 @@ namespace mAuth.DataAccess
             parameter.Add("@pOSId", posID);
             parameter.Add("@ticketId", ticketORMemberID);
             parameter.Add("@attractionCode", attractionCode);
-            parameter.Add("@eventDate",DateTime.Now);
+            parameter.Add("@eventDate", createdDate != DateTime.MinValue ? createdDate :DateTime.Now);
             parameter.Add("@updateId", updateID);
 
 
@@ -151,28 +152,32 @@ namespace mAuth.DataAccess
 
         }
 
-        public List<ITransactionTypeResult> GetTicketList(string transactionOrTicketID, string moduleCode, string attractionCode, int posID)
+        public List<ITransactionTypeResult> GetTicketList(string transactionOrTicketID,string attractionCode, int posID,bool isGroupTicket=false)
         {
-
+            string[] selectedAttractions = attractionCode.Split('|');
+            char isGroupTicketType = isGroupTicket ? 'Y' : 'N';
             DynamicParameters parameter = new DynamicParameters();
-            List<ITransactionTypeResult> result = new List<ITransactionTypeResult>();
+            List<ITransactionTypeResult> TransactionList = new List<ITransactionTypeResult>();
             parameter.Add("@OrganizationUnitId", 1);
             parameter.Add("@POSId", posID);
             parameter.Add("@transactionId", transactionOrTicketID);
-            parameter.Add("@module", moduleCode);
-            parameter.Add("@attractionCode", attractionCode);
+            parameter.Add("@isGroupTicket", isGroupTicketType);
             parameter.Add("@eventDate", DateTime.Now);
             try
             {
                 using (var con = new SqlConnection(connection))
                 {
-
-                    result = con.Query<ITransactionTypeResult>("usp_IOS_TicketByAttraction_Find", parameter,
+                    foreach(string attraction in selectedAttractions)
+                    {
+                        parameter.Add("@attractionCode", attraction);
+                        List<ITransactionTypeResult> result = con.Query<ITransactionTypeResult>("usp_IOS_TicketByAttraction_Find", parameter,
                         commandType: CommandType.StoredProcedure).ToList();
-                    // result= JsonConvert.SerializeObject(result1);
+                        TransactionList = TransactionList.Concat(result).ToList();
+                        // result= JsonConvert.SerializeObject(result1);
+                    }
                 }
 
-                return result;
+                return TransactionList;
             }
             catch (Exception e)
             {
@@ -185,7 +190,7 @@ namespace mAuth.DataAccess
 
 
         public string Authorize(string ticketORMemberID, string attractionCode, string updateID,
-            string memberDataLineID, int posID, string salesTransactionId = "")
+            string memberDataLineID, int posID, string salesTransactionId = "",int quantity = 0,string visitorType = null, string eventTime = null,string ticketCode = null)
         {
             DynamicParameters parameter = new DynamicParameters();
             string result = string.Empty;
@@ -198,6 +203,10 @@ namespace mAuth.DataAccess
             parameter.Add("@utilizedTime", DateTime.Now.ToString("HH:mm:ss"));
             parameter.Add("@updateId", updateID);
             parameter.Add("@salesTransactionId", salesTransactionId);
+            parameter.Add("@quantity", quantity);
+            parameter.Add("@visitorType", visitorType);
+            parameter.Add("@time", eventTime);
+            parameter.Add("@ticketCode", ticketCode);
             parameter.Add("@returnValue", result, DbType.String, direction: ParameterDirection.Output);
 
 
@@ -222,7 +231,7 @@ namespace mAuth.DataAccess
         }
 
 
-        public IMemberTypeResult GetMembershipList(string membershipCode, string includeImage)
+        public IMemberTypeResult GetMembershipList(string membershipCode, string includeImage,string attraction)
         {
 
             DynamicParameters parameter = new DynamicParameters();
@@ -231,6 +240,7 @@ namespace mAuth.DataAccess
             parameter.Add("@customerCode", membershipCode);
             parameter.Add("@includeImage", includeImage);
             parameter.Add("@authorizedDate", DateTime.Now);
+            parameter.Add("@attractionCode", attraction);
             try
             {
                 using (var con = new SqlConnection(connection))
@@ -240,8 +250,13 @@ namespace mAuth.DataAccess
                          commandType: CommandType.StoredProcedure);
 
                     result.childCount = temp.ReadFirst<int>();
-                    result.membershipList = temp.Read<IMemershipList>().ToList();
-
+                    result.validAttractions = temp.Read<string>().ToList();
+                     
+                    if(!temp.IsConsumed)
+                        result.membershipList = temp.Read<IMemershipList>().ToList();
+                    else
+                        result.membershipList = new List<IMemershipList>();
+ 
                 }
 
                 return result;
@@ -253,7 +268,35 @@ namespace mAuth.DataAccess
             }
 
         }
+        public void InsertFailedOfflineData(IAuthorizeRequest authorizeRequest, string ticketResult)
+        {
+            string result = string.Empty;
+            DynamicParameters param = new DynamicParameters();
+            param.Add("@code", authorizeRequest.code);
+            param.Add("@failureReason", ticketResult);
+            param.Add("@attraction", authorizeRequest.attraction);
+            param.Add("@authorizedDate", authorizeRequest.createdDate);
+            param.Add("@userId", authorizeRequest.updateID );
+            param.Add("@thirdPartyType", authorizeRequest.thirdPartyType);
+            param.Add("@thirdPartyVerificationStatus", authorizeRequest.thirdPartyVerificationStatus);
+            param.Add("@posId", authorizeRequest.posId);
 
+            try
+            {
+
+                using (var con = new SqlConnection(connection))
+                {
+
+                    result = con.Query<string>("usp_IOS_Add_FailedOfflineData", param, commandType: CommandType.StoredProcedure).SingleOrDefault<string>();
+
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+        }
 
 
         #region Member Benefit Insertion
@@ -276,14 +319,14 @@ namespace mAuth.DataAccess
             return SalesTransactionId;
         }
 
-        public SalesTransaction BuildSalesTranasction(int POSId, string UserId, string TransactionId, string customerCode)
+        public SalesTransaction BuildSalesTranasction(int POSId, string UserId, string TransactionId, string customerCode,int LocationId,string cityPassCode = null)
         {
             SalesTransaction salesTransaction = new SalesTransaction();
             salesTransaction.customerCode = customerCode;
             salesTransaction.customField1 = "";
             salesTransaction.customField2 = "";
             salesTransaction.customField3 = "";
-            salesTransaction.locationId = 1;
+            salesTransaction.locationId = (Int16)LocationId;
             salesTransaction.moduleCode = "Admission";
             salesTransaction.netSalesAmount = 0;
             salesTransaction.notes = "";
@@ -309,10 +352,14 @@ namespace mAuth.DataAccess
             salesTransaction.salesTransactionDiscount = new List<SalesTransactionDiscount>();
             salesTransaction.salesTransactionPayment = new List<SalesTransactionPayment>();
             salesTransaction.salesTransactionDonation = new List<SalesTransactionDonation>();
+
+            if(!string.IsNullOrEmpty(cityPassCode))
+                salesTransaction.customField3 = cityPassCode;
+
             return salesTransaction;
         }
 
-        public List<SalesTransactionDetail> BuildSalesTransactionDetail(List<IMembershipAdditionalPrograms> ticketList, int POSId, string UserId, string TransactionId)
+        public List<SalesTransactionDetail> BuildSalesTransactionDetail(List<IMembershipAdditionalPrograms> ticketList, int POSId, string UserId, string TransactionId,string TransactionMode)
         {
             List<SalesTransactionDetail> salesTransactionDetailList = new List<SalesTransactionDetail>();
             int ix = 1;
@@ -333,7 +380,7 @@ namespace mAuth.DataAccess
                 salesTransactionDetail.LineItemTotal = ticket.lineItemTotal;
                 salesTransactionDetail.RulesApplied = "N";
                 salesTransactionDetail.RulesId = ticket.rulesId;
-                salesTransactionDetail.VisitorType = ticket.visitorTypeDescription; //to be changed to code
+                salesTransactionDetail.VisitorType = ticket.visitorTypeCode; //to be changed to code
                 salesTransactionDetail.LineTransactionDescription = string.Empty;
                 salesTransactionDetail.ReferenceNumber = string.Empty; //to be changed to code
                 salesTransactionDetail.Taxable = "N";
@@ -345,7 +392,7 @@ namespace mAuth.DataAccess
                 salesTransactionDetail.UpdateDate = DateTime.Now.Date;
                 salesTransactionDetail.SalesTransactionId = TransactionId;
                 salesTransactionDetail.OrganizationUnitId = 1;
-                salesTransactionDetail.TransactionMode = "Guest";
+                salesTransactionDetail.TransactionMode = TransactionMode;
                 salesTransactionDetail.TicketId = null;
                 salesTransactionDetail.GiftCardSwipeReq = "N";
                 salesTransactionDetail.CategoryCode = string.Empty;
@@ -371,12 +418,9 @@ namespace mAuth.DataAccess
 
             return salesTransactionDetailList;
         }
-        public void SaveSalesTransaction(List<IMembershipAdditionalPrograms> ticketList, int POSId, string UserId, string TransactionId,string customerCode)
+
+        public void InsertSalesTransactionandDetail(SalesTransaction salesTransaction)
         {
-
-            SalesTransaction salesTransaction = BuildSalesTranasction(POSId, UserId, TransactionId, customerCode);
-            salesTransaction.salesTransactionDetail = BuildSalesTransactionDetail(ticketList, POSId, UserId, TransactionId);
-
             using (TransactionScope scope = new TransactionScope())
             {
                 InsertSalesTransaction(salesTransaction);
@@ -387,10 +431,22 @@ namespace mAuth.DataAccess
                 }
                 scope.Complete();
             }
+        }
+
+
+        public void SaveSalesTransaction(List<IMembershipAdditionalPrograms> ticketList, int POSId, string UserId, string TransactionId,string customerCode,int LocationId)
+        {
+
+            SalesTransaction salesTransaction = BuildSalesTranasction(POSId, UserId, TransactionId, customerCode, LocationId);
+            salesTransaction.salesTransactionDetail = BuildSalesTransactionDetail(ticketList, POSId, UserId, TransactionId,"Guest");
+
+            InsertSalesTransactionandDetail(salesTransaction);
 
                 //scope.Complete();
             //}
         }
+
+        
 
         public void InsertSalesTransaction(SalesTransaction salesTransaction)
         {
@@ -559,6 +615,32 @@ namespace mAuth.DataAccess
             }
 
 
+        }
+
+        public List<IMembershipSearchList> MembershipSearch(IMembershipSearchFilter Filter)
+        {
+            DynamicParameters parameter = new DynamicParameters();
+            string result = string.Empty;
+            parameter.Add("@OrganizationUnit", 1);
+            parameter.Add("@Name", Filter.name);
+            parameter.Add("@ContactNumber", Filter.phoneNumber);
+            parameter.Add("@EmailAddress", Filter.email);
+
+
+            try
+            {
+                using (var con = new SqlConnection(connection))
+                {
+                    List<IMembershipSearchList> membershipList = con.Query<IMembershipSearchList>("IOS_Usp_CustomerMembershipFindAll", parameter,
+                        commandType: CommandType.StoredProcedure).ToList();
+                    return membershipList;
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
         }
 
 

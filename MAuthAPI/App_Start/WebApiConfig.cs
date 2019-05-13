@@ -20,17 +20,25 @@ namespace MAuthAPI
         public static void Register(HttpConfiguration config)
         {
 
-             // You have to use Replace() because only one handler is supported
-            
-            var cors = new EnableCorsAttribute("*", "*", "*");
+            // You have to use Replace() because only one handler is supported
+
+             var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
             // Web API configuration and services
             var services = new UnityContainer();
             var connection = System.Configuration.ConfigurationManager.AppSettings["ConnectionString"];
             IMauthData data = new mAuth.DataAccess.Authorization(connection);
+
+            IHttpAccess httpClient = new mAuth.Common.HttpAccessService();
+            InjectionConstructor cityPassInjectionConstructor = new InjectionConstructor(httpClient);
+            services.RegisterType<ICityPass, mAuth.BusinessLogics.CityPassService>(cityPassInjectionConstructor);
+
+            
+
             InjectionConstructor injectionConstructor = new InjectionConstructor(data);
+
             services.RegisterType<IMauthBussiness, mAuth.BusinessLogics.Authorization>(injectionConstructor);
-           
+
 
             ImAuthUserDataAccess udata = new mAuth.DataAccess.mAuthUser(connection);
             InjectionConstructor userInjector = new InjectionConstructor(udata);
@@ -41,7 +49,7 @@ namespace MAuthAPI
             InjectionConstructor peopleInjection = new InjectionConstructor(peopleData);
             services.RegisterType<IPeopleCounterBusiness, mAuth.BusinessLogics.PeopleCounter>(peopleInjection);
 
-           
+            
             config.DependencyResolver = new UnityResolver(services);
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -51,10 +59,12 @@ namespace MAuthAPI
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{action}/{id}",
-                defaults: new { id = RouteParameter.Optional, action = RouteParameter.Optional } 
+                defaults: new { id = RouteParameter.Optional, action = RouteParameter.Optional }
             );
 
             log4net.Config.XmlConfigurator.Configure();
         }
+            
+
     }
 }

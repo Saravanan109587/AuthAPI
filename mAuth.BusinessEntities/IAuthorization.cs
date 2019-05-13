@@ -21,17 +21,23 @@ namespace mAuth.BusinessEntities
     {
         public string posId { get; set; }
         public string posName { get; set; }
+        public string LocationId { get; set; }
     }
 
     public class IAuthorizeRequest
     {
         public string code { get; set; }
         public string attraction { get; set; }
+        public string visitorType { get; set; }
         public int posId { get; set; }
         public string updateID { get; set; }
         public string includeMemListImg { get; set; }
         public string selectedMemberLineID { get; set; }
-
+        public DateTime createdDate { get; set; }
+        public bool isGroupTicket { get; set; }
+        public string thirdPartyType { get; set; }
+        public string thirdPartyVerificationStatus { get; set; }
+        public int locationId { get; set; }
     }
     public class ICodeValidationResult
     {
@@ -75,6 +81,10 @@ namespace mAuth.BusinessEntities
         public List<MembershipList> MemList { get; set; }
         public List<ITransactionTypeResult> TransList { get; set; }
         public List<IMembershipAdditionalPrograms> BenefitList { get; set; }
+        public List<string> validAttractions { get; set; }
+        public string code { get; set; }
+        public bool isGroupTicket { get; set; }
+        public int LocationId { get; set; }
     }
     public class IMembershipAdditionalPrograms
     {
@@ -84,6 +94,7 @@ namespace mAuth.BusinessEntities
         public decimal price { get; set; }
         public int authCount { get; set; }
         public string visitorTypeDescription { get; set; }
+        public string visitorTypeCode { get; set; }
         public int maxTicket { get; set; }
         public string membershipCode { get; set; }
         public string attractionCode { get; set; }
@@ -209,13 +220,26 @@ namespace mAuth.BusinessEntities
         public string ticketCode { get; set; }
         public string ticketPrintStatus { get; set; }
         public string attractionDescription { get; set; }
+        public string ticketDescription { get; set; }
+        public int    quantity { get; set; }
     }
     public class IMemberTypeResult
     {
         public int childCount { get; set; }
         public List<IMemershipList> membershipList { get; set; }
+        public List<string> validAttractions { get; set; }
 
     }
+
+    public  class IMembershipSearchFilter
+    {
+        public string name;
+        public string email;
+        public string phoneNumber;
+    }
+
+
+
     public class IMemershipList
     {
         public int organizationUnitId { get; set; }
@@ -241,7 +265,7 @@ namespace mAuth.BusinessEntities
         public int extraCardPrintCount { get; set; }
         public string email { get; set; }
         public int authCount { get; set; }
-
+        public int quantity { get; set; }
     }
 
     public class SalesTransaction
@@ -575,5 +599,34 @@ namespace mAuth.BusinessEntities
         public const string MEMBERSHIPLISTONLY = "MEMBERSHIPLISTONLY";
         public const string ADDTIONALPROGRAMONLY = "ADDTIONALPROGRAMONLY";
         public const string BOTH = "BOTH";
+    }
+
+
+   
+    public class IMembershipSearchList
+    {
+        public short organizationUnitId { get; set; }
+        public string customerCode { get; set; }
+        public string name { get; set; }
+        public string status { get; set; }
+        public string memberTypeCode { get; set; }
+        public string memberTypeDescription { get; set; }
+        public string passTypeCode { get; set; }
+        public string passTypeDescription { get; set; }
+        public DateTime renewalExpiryDate { get; set; }
+        public string address1 { get; set; }
+        public string customerTypeCode { get; set; }
+        public DateTime joinDate { get; set; }
+        public char renewFlag { get; set; }
+        public int  childCount { get; set; }
+        public DateTime lastActivityDate { get; set; }
+        public string alternateId { get; set; }
+        public string contactEmail { get; set; }
+        public string contactNumber { get; set; }
+        public byte[] image { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
+        public string country { get; set; }
+        public string postalZipCode { get; set; }
     }
 }
