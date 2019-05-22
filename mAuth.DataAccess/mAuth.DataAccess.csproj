@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Authorization.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Events.cs" />
     <Compile Include="mAuthUser.cs" />
     <Compile Include="PeopleCounter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

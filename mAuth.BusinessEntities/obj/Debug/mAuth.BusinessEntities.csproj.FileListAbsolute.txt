@@ -6,7 +6,7 @@ D:\Code\mAuth\MAuthAPI\mAuth.BusinessEntities\obj\Debug\mAuth.BusinessEntities.p
 D:\Code\mAuth\MAuthAPI\mAuth.BusinessEntities\obj\Debug\mAuth.BusinessEntities.csprojAssemblyReference.cache
 D:\mAuth2.0\MAuthAPI\mAuth.BusinessEntities\bin\Debug\mAuth.BusinessEntities.dll
 D:\mAuth2.0\MAuthAPI\mAuth.BusinessEntities\bin\Debug\mAuth.BusinessEntities.pdb
-D:\mAuth2.0\MAuthAPI\mAuth.BusinessEntities\obj\Debug\mAuth.BusinessEntities.csprojAssemblyReference.cache
 D:\mAuth2.0\MAuthAPI\mAuth.BusinessEntities\obj\Debug\mAuth.BusinessEntities.csproj.CoreCompileInputs.cache
 D:\mAuth2.0\MAuthAPI\mAuth.BusinessEntities\obj\Debug\mAuth.BusinessEntities.dll
 D:\mAuth2.0\MAuthAPI\mAuth.BusinessEntities\obj\Debug\mAuth.BusinessEntities.pdb
+D:\mAuth2.0\MAuthAPI\mAuth.BusinessEntities\obj\Debug\mAuth.BusinessEntities.csprojAssemblyReference.cache

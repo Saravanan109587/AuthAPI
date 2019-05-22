@@ -47,7 +47,18 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Common.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="HttpAccessService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mAuth.common.csproj.vspscc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mAuth.BusinessEntities\mAuth.BusinessEntities.csproj">
+      <Project>{a88fc875-c6b2-423d-993c-3c8770b01413}</Project>
+      <Name>mAuth.BusinessEntities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

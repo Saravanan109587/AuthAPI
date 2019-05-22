@@ -49,7 +49,12 @@ namespace MAuthAPI
             InjectionConstructor peopleInjection = new InjectionConstructor(peopleData);
             services.RegisterType<IPeopleCounterBusiness, mAuth.BusinessLogics.PeopleCounter>(peopleInjection);
 
+
             
+            IEventRepo eventRepo = new mAuth.DataAccess.EventsRepo(connection);
+            InjectionConstructor eventInjector = new InjectionConstructor(eventRepo);
+            services.RegisterType<IEventBusiness, mAuth.BusinessLogics.EventsBusiness>(eventInjector);
+
             config.DependencyResolver = new UnityResolver(services);
             // Web API routes
             config.MapHttpAttributeRoutes();

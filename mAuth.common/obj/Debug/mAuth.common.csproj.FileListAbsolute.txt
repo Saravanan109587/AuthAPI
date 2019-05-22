@@ -6,7 +6,10 @@ D:\Code\mAuth\MAuthAPI\mAuth.common\obj\Debug\mAuth.common.pdb
 D:\Code\mAuth\MAuthAPI\mAuth.common\obj\Debug\mAuth.common.csprojAssemblyReference.cache
 D:\mAuth2.0\MAuthAPI\mAuth.common\bin\Debug\mAuth.common.dll
 D:\mAuth2.0\MAuthAPI\mAuth.common\bin\Debug\mAuth.common.pdb
-D:\mAuth2.0\MAuthAPI\mAuth.common\obj\Debug\mAuth.common.csprojAssemblyReference.cache
 D:\mAuth2.0\MAuthAPI\mAuth.common\obj\Debug\mAuth.common.csproj.CoreCompileInputs.cache
 D:\mAuth2.0\MAuthAPI\mAuth.common\obj\Debug\mAuth.common.dll
 D:\mAuth2.0\MAuthAPI\mAuth.common\obj\Debug\mAuth.common.pdb
+D:\mAuth2.0\MAuthAPI\mAuth.common\bin\Debug\mAuth.BusinessEntities.dll
+D:\mAuth2.0\MAuthAPI\mAuth.common\bin\Debug\mAuth.BusinessEntities.pdb
+D:\mAuth2.0\MAuthAPI\mAuth.common\obj\Debug\mAuth.common.csprojAssemblyReference.cache
+D:\mAuth2.0\MAuthAPI\mAuth.common\obj\Debug\mAuth.common.csproj.CopyComplete

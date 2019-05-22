@@ -48,6 +48,9 @@
     <Compile Include="Class1.cs" />
     <Compile Include="IAppSetting.cs" />
     <Compile Include="IAuthorization.cs" />
+    <Compile Include="ICityPass.cs" />
+    <Compile Include="IEvents.cs" />
+    <Compile Include="IHttpAccess.cs" />
     <Compile Include="ILogin.cs" />
     <Compile Include="IMauth.cs" />
     <Compile Include="IMAuthUser.cs" />

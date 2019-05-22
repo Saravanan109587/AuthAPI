@@ -58,28 +58,4 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EE89F6EF-E877-4FAB-B2F7-91D222F4B0C4}
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://192.168.168.12:8080/tfs/fpepos
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = mAuth.BusinessEntities\\mAuth.BusinessEntities.csproj
-		SccProjectName1 = mAuth.BusinessEntities
-		SccLocalPath1 = mAuth.BusinessEntities
-		SccProjectUniqueName2 = mAuth.BusinessLogics\\mAuth.BusinessLogics.csproj
-		SccProjectName2 = mAuth.BusinessLogics
-		SccLocalPath2 = mAuth.BusinessLogics
-		SccProjectUniqueName3 = mAuth.common\\mAuth.common.csproj
-		SccProjectName3 = mAuth.common
-		SccLocalPath3 = mAuth.common
-		SccProjectUniqueName4 = mAuth.DataAccess\\mAuth.DataAccess.csproj
-		SccProjectName4 = mAuth.DataAccess
-		SccLocalPath4 = mAuth.DataAccess
-		SccProjectUniqueName5 = MAuthAPI.Test\\MAuthAPI.Test.csproj
-		SccProjectName5 = MAuthAPI.Test
-		SccLocalPath5 = MAuthAPI.Test
-		SccProjectUniqueName6 = MAuthAPI\\MAuthAPI.csproj
-		SccProjectName6 = MAuthAPI
-		SccLocalPath6 = MAuthAPI
-	EndGlobalSection
 EndGlobal

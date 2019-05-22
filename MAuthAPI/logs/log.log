@@ -2403,3 +2403,17 @@
  [DEBUG] 2019-03-15 15:16:34,950 [38] MAuthAPI.Controllers.AuthorizationController - GetAttractions - Entered into Get Attractions
  [DEBUG] 2019-03-15 15:16:34,984 [36] MAuthAPI.Controllers.AuthorizationController - .ctor - Entered into mAUth controller
  [DEBUG] 2019-03-15 15:16:34,984 [36] MAuthAPI.Controllers.AuthorizationController - GetStationList - Entered intoGet Stattion List
+ [DEBUG] 2019-04-01 09:34:46,086 [5] MAuthAPI.Controllers.AuthorizationController - .ctor - Entered into mAUth controller
+ [DEBUG] 2019-04-01 09:34:46,554 [5] MAuthAPI.Controllers.AuthorizationController - Validate - Entered into validate with code 1810280400118
+ [DEBUG] 2019-04-01 09:34:47,811 [5] MAuthAPI.Controllers.AuthorizationController - Validate - Status Valid
+ [DEBUG] 2019-04-01 09:34:47,811 [5] MAuthAPI.Controllers.AuthorizationController - Validate - Type  TICKETWISE
+ [DEBUG] 2019-04-01 09:35:29,003 [19] MAuthAPI.Controllers.AuthorizationController - .ctor - Entered into mAUth controller
+ [DEBUG] 2019-04-01 09:35:29,004 [19] MAuthAPI.Controllers.AuthorizationController - Validate - Entered into validate with code 181028040011812
+ [DEBUG] 2019-04-01 09:35:30,277 [19] MAuthAPI.Controllers.AuthorizationController - Validate - Status Invalid
+ [DEBUG] 2019-05-22 12:19:30,484 [18] MAuthAPI.CommonExceptionHandler - MoveNext - Exeception path is D:\mAuth2.0\MAuthAPI\MAuthAPI\ErrorLog
+ [ERROR] 2019-05-22 12:19:30,511 [18] MAuthAPI.CommonExceptionHandler - MoveNext - Exeception   is An error occurred when trying to create a controller of type 'EventController'. Make sure that the controller has a parameterless public constructor.
+ [DEBUG] 2019-05-22 13:57:44,863 [11] MAuthAPI.CommonExceptionHandler - MoveNext - Exeception path is D:\mAuth2.0\MAuthAPI\MAuthAPI\ErrorLog
+ [ERROR] 2019-05-22 13:57:44,892 [11] MAuthAPI.CommonExceptionHandler - MoveNext - Exeception   is An error occurred when trying to create a controller of type 'EventController'. Make sure that the controller has a parameterless public constructor.
+ [DEBUG] 2019-05-22 14:00:03,061 [12] MAuthAPI.CommonExceptionHandler - MoveNext - Exeception path is D:\mAuth2.0\MAuthAPI\MAuthAPI\ErrorLog
+ [ERROR] 2019-05-22 14:00:03,087 [12] MAuthAPI.CommonExceptionHandler - MoveNext - Exeception   is Cannot open database "ORGE" requested by the login. The login failed.
+Login failed for user 'sa'.

@@ -38,6 +38,9 @@
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authorization.cs" />
+    <Compile Include="CityPassService.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Events.cs" />
     <Compile Include="mAuthUser.cs" />
     <Compile Include="PeopleCounter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,6 +64,10 @@
       <Project>{a88fc875-c6b2-423d-993c-3c8770b01413}</Project>
       <Name>mAuth.BusinessEntities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\mAuth.common\mAuth.common.csproj">
+      <Project>{657159ed-b251-4669-b82f-a64ab9314784}</Project>
+      <Name>mAuth.common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\mAuth.DataAccess\mAuth.DataAccess.csproj">
       <Project>{761a8396-4717-4889-bb46-78c7b625e196}</Project>
       <Name>mAuth.DataAccess</Name>
@@ -66,6 +75,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mAuth.BusinessLogics.csproj.vspscc" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

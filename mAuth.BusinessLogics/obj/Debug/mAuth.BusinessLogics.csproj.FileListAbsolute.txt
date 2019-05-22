@@ -32,3 +32,5 @@ D:\mAuth2.0\MAuthAPI\mAuth.BusinessLogics\obj\Debug\mAuth.BusinessLogics.csproj.
 D:\mAuth2.0\MAuthAPI\mAuth.BusinessLogics\obj\Debug\mAuth.BusinessLogics.csproj.CopyComplete
 D:\mAuth2.0\MAuthAPI\mAuth.BusinessLogics\obj\Debug\mAuth.BusinessLogics.dll
 D:\mAuth2.0\MAuthAPI\mAuth.BusinessLogics\obj\Debug\mAuth.BusinessLogics.pdb
+D:\mAuth2.0\MAuthAPI\mAuth.BusinessLogics\bin\Debug\Newtonsoft.Json.dll
+D:\mAuth2.0\MAuthAPI\mAuth.BusinessLogics\bin\Debug\Newtonsoft.Json.xml
